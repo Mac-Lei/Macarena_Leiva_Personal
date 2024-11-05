@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/padding"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Campo para ingresar un nuevo producto -->
+    <EditText
+        android:id="@+id/editTextTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre del producto"
+        android:paddingTop="20dp" />
+
+    <!-- Campo para ingresar la cantidad del producto -->
+    <EditText
+        android:id="@+id/editTextCantidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTask"
+        android:hint="Cantidad"
+        android:inputType="number" />
+
+    <!-- Botón para agregar el producto -->
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextCantidad"
+        android:text="Agregar" />
+
+    <!-- Lista para mostrar los productos -->
+    <ListView
+        android:id="@+id/listViewTasks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonAdd" />
+
+    <!-- Campo para editar el producto seleccionado -->
+    <EditText
+        android:id="@+id/editTextEditTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listViewTasks"
+        android:hint="Editar nombre"
+        android:visibility="gone" />
+
+    <!-- Campo para editar la cantidad del producto seleccionado -->
+    <EditText
+        android:id="@+id/editTextEditCantidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextEditTask"
+        android:hint="Editar cantidad"
+        android:inputType="number"
+        android:visibility="gone" />
+
+    <!-- Botón para guardar cambios -->
+    <Button
+        android:id="@+id/buttonEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextEditCantidad"
+        android:text="Guardar Cambios"
+        android:visibility="gone" />
+
+    <!-- Botón para eliminar el producto -->
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/buttonEdit"
+        android:layout_below="@id/editTextEditCantidad"
+        android:text="Eliminar"
+        android:visibility="gone" />
+</RelativeLayout>
